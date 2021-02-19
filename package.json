@@ -1,0 +1,44 @@
+{
+  "name": "excel_project",
+  "version": "1.0.0",
+  "description": "JS Exel App",
+  "main": "webpack.config.js",
+  "browserslist": "> 0.25%, not dead",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --mode=development",
+    "build": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elenagradovich/js_excel_project.git"
+  },
+  "keywords": [
+    "js",
+    "excel"
+  ],
+  "author": "Gradovich Elena <elena@gradovich.by>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elenagradovich/js_excel_project/issues"
+  },
+  "homepage": "https://github.com/elenagradovich/js_excel_project#readme",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.12.17",
+    "@babel/preset-env": "^7.12.17",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^7.0.0",
+    "css-loader": "^5.0.2",
+    "html-webpack-plugin": "^5.0.0",
+    "mini-css-extract-plugin": "^1.3.8",
+    "sass": "^1.32.7",
+    "sass-loader": "^11.0.1",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
+  }
+}
