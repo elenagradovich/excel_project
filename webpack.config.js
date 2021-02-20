@@ -6,16 +6,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = (env, argv) => {
 
-    const isProd = argv.mode === 'development'
-    const isDev = argv.mode === 'production'
-
-    console.log('isProd: ', isProd)
-    console.log('isDev: ', isDev)
+    const isProd = argv.mode === 'production'
+    const isDev = argv.mode === 'development'
     const filename = (ext) => isProd ? `[name].[contenthash].bundle.${ext}` : `[name].bundle.${ext}`
 
     return {
         context: path.resolve(__dirname, 'src'), //исходники в src
-        mode: 'development',
+        target: 'web',
+        //mode: 'development',
         entry: ["@babel/polyfill", './index.js'],
         output: {
             filename: filename('js'),
@@ -27,6 +25,13 @@ module.exports = (env, argv) => {
                 '@': path.resolve(__dirname, 'src'),
                 '@core': path.resolve(__dirname, 'src', 'core'),
             }
+        },
+        devServer: {
+            contentBase: path.join(__dirname, 'dist'),
+            //compress: true,
+            hot : true,
+            //watchContentBase: true, //for HTML updates
+            port: 3333
         },
         plugins: [
             new CleanWebpackPlugin(), //clean dist

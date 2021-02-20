@@ -1,5 +1,5 @@
 import './module.js'
 import './scss/index.scss'
 
-console.log('index')
+console.log('server_new')
 
