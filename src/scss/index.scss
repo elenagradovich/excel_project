@@ -1,6 +1,27 @@
-$bg-color: #fdf8f1;
+@import "~normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+@import "header";
+@import "toolbar";
+@import "table";
+@import "formula";
+@import "controls";
+@import "excel";
+@import "dashboard";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  background-color: $bg-color;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 12px;
 }
+
+
+
+//https://google.github.io/material-design-icons/
+//https://material.io/resources/icons/
+

@@ -1,0 +1,18 @@
+@import "varaibles";
+@import "mixins";
+
+.toolbar {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: $header-height;
+  height: $toolbar-height;
+  background: $bg-toolbar;
+  border-top: 1px solid $border-color;
+  padding: 10px 5px;
+
+  &__button {
+    @include button();
+  }
+}

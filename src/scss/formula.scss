@@ -1,0 +1,33 @@
+@import "varaibles";
+@import "mixins";
+
+.formula {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: $header-height + $toolbar-height;
+  height: $formula-height;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+
+
+  &__info {
+    font-size: 18px;
+    text-align: center;
+    font-style: italic;
+    border-right: 1px solid $border-color;
+    min-width: $info-width-cell;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 4px;
+    font-size: 12px;
+    margin: 0;
+    outline: none;
+    color: black;
+
+  }
+}

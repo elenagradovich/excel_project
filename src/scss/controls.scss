@@ -1,0 +1,9 @@
+@import "varaibles";
+@import "mixins";
+
+.controls {
+
+  &__button {
+    @include button(#5ED9BC);
+  }
+}
